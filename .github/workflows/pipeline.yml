@@ -15,8 +15,8 @@ jobs:
   register-dataset:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Install Dependencies
@@ -74,7 +74,7 @@ jobs:
           nohup mlflow ui --host 0.0.0.0 --port 5000 &  # Run MLflow UI in the background
           sleep 5  # Wait for a moment to let the server starts
       - name: Train model with MLflow tracking
-        run: tourism_project/model_building/train.py
+        run: python tourism_project/model_building/train.py
       - name: Commit Trained Model
         run: |
           git config user.name "github-actions[bot]"
