@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import os
 
-df = pd.read_csv("data/tourism.csv")
+df = pd.read_csv("tourism_project/data/tourism.csv")
 
 print("Dataset loaded successfully.")
 print(f"Dataset shape: {df.shape}")
