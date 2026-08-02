@@ -140,7 +140,7 @@ with mlflow.start_run():
     print(classification_report(ytest, y_pred_test, target_names=['No Purchase', 'Purchase']))
 
     # Save the model locally
-    model_path = "best_tourism_model_v1.joblib"
+    model_path = "tourism_project/deployment/best_tourism_model_v1.joblib"
     joblib.dump(best_model, model_path)
     print(f"\nModel saved locally as: {model_path}")
 
